@@ -80,7 +80,7 @@ function sumOfNaturalNum() {
 
 function setInput() {}
 
-// Sort Date in format dd mmm yyyy
+// 7. Sort Date in format dd-mmm-yy
 var array = ["1-jun-15", "1-feb-15", "1-apr-15", "1-may-15", "1-jan-15", "1-mar-15"],
     MONTHS = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
 
@@ -89,4 +89,17 @@ array.sort(function (a, b) {
         bb = b.split('-');
     return aa[2] - bb[2] || MONTHS[aa[1]] - MONTHS[bb[1]] || aa[0] - bb[0];
 });
+console.log(array);
+
+// 8. Sort Date in format dd mmm yyyy
+
+var array = ["1 jun 2015", "1 feb 2015", "1 apr 2016", "1 may 2013", "1 jan 2012", "1 mar 2009"],
+    MONTHS = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
+
+array.sort(function (a, b) {
+    var aa = a.split(' '),
+        bb = b.split(' ');
+    return aa[2] - bb[2] || MONTHS[aa[1]] - MONTHS[bb[1]] || aa[0] - bb[0];
+});
+
 console.log(array);
