@@ -103,3 +103,28 @@ array.sort(function (a, b) {
 });
 
 console.log(array);
+
+// 9. Sort on the basis of frequency the input array = [1,1,1,1,12,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,6,6,6,6,7,9]
+function sortData(input){
+ let obj = { };
+  
+ for(let i=0;i< input.length;i++){
+  console.log(obj[i]);
+   if(obj[input[i]] === undefined){
+     obj[input[i]] = 1;
+   } else {
+     obj[input[i]] = obj[input[i]]+ 1;
+   }
+ 
+ }
+  let sortObj;
+  sortObj = Object.entries(obj).sort(function(a, b) {
+    return b[1] - a[1];
+    // For ascending Order // return a[1] - b[1];
+  });
+
+  console.log(obj);
+  console.log(sortObj);
+}
+
+sortData([1,1,1,1,12,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,6,6,6,6,7,9]);
