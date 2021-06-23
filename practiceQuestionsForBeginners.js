@@ -141,9 +141,10 @@ function longAlphaword(input){
     }
     console.log("aplha words",listOfAlphaWords);
   }
-  let sortedlistOfAlphaWords = listOfAlphaWords.sort(); // Check for abcdefg as input.
+   // Sorted in Descending order on basis of length
+  let sortedlistOfAlphaWords = listOfAlphaWords.sort(function(a, b){return b.length - a.length });
 
- console.log("sortedAlphawords",sortedlistOfAlphaWords);
+  console.log("Longest Alphaword is",sortedlistOfAlphaWords[0]);
 }
 
 longAlphaword([ 'at', 'apple','abcdef', 'floor', 'city', 'citadel']);
