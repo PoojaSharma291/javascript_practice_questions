@@ -128,3 +128,22 @@ function sortData(input){
 }
 
 sortData([1,1,1,1,12,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,6,6,6,6,7,9]);
+
+// 10. Find the longest alpha word from the input array - input = [at, apple, floor, test, city]
+function longAlphaword(input){
+ let listOfAlphaWords = [];
+  for(let i=0;i< input.length;i++){
+  	let wordArr = input[i].split('');
+    let sortedArr = input[i].split('').sort();
+    console.log("sorted",sortedArr);
+    if( wordArr.join('') === sortedArr.join('')) { 
+     	listOfAlphaWords.push(input[i]);
+    }
+    console.log("aplha words",listOfAlphaWords);
+  }
+  let sortedlistOfAlphaWords = listOfAlphaWords.sort(); // Check for abcdefg as input.
+
+ console.log("sortedAlphawords",sortedlistOfAlphaWords);
+}
+
+longAlphaword([ 'at', 'apple','abcdef', 'floor', 'city', 'citadel']);
