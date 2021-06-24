@@ -148,3 +148,15 @@ function longAlphaword(input){
 }
 
 longAlphaword([ 'at', 'apple','abcdef', 'floor', 'city', 'citadel']);
+
+// 11. Check if the Input string is Palindrome or not
+function palindrome(input){
+	let reverseInput = input.split('').reverse().join('');
+    if(input === reverseInput){
+    	console.log("It is a Palindrome");
+    } else {
+    	console.log("It is not a Palindrome");
+    }
+}
+palindrome("POOJA");
+// palindrome("NITIN");
