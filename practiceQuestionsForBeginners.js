@@ -160,3 +160,19 @@ function palindrome(input){
 }
 palindrome("POOJA");
 // palindrome("NITIN");
+
+// 12. Print Fizz for multiple of 3, Buzz for multiple of 5 and Fizz Buzz if multiple of both 
+function fizzBuzz(input){
+	for(let i=1;i<= input;i++){
+    	if(i % 15 === 0){
+        	console.log("FizzBuzz");
+        } else if(i % 5 === 0){
+        	console.log("Buzz");
+        } else if(i % 3 === 0){
+        	console.log("Fizz");
+        } else {
+        	 console.log(i);
+        }
+    }
+}
+fizzBuzz(30);
