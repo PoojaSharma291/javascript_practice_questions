@@ -183,3 +183,15 @@ function palindrome(input){
  return reverseInput === input ? true : false;
 }
 palindrome("NITIN");
+
+// 14. Fibonacci Algo
+function printFibonacci(num){
+  var result = [0,1];
+	for (let i=2;i<=num;i++){
+	 let prev1 = result[i-2];
+         let prev2 = result[i-1];
+	 result.push(prev1+prev2);
+	}
+ console.log(result);
+}
+printFibonacci(34);
