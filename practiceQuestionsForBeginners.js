@@ -195,3 +195,11 @@ function printFibonacci(num){
  console.log(result);
 }
 printFibonacci(34);
+
+// 15. Check Whether Anagram or not and return boolean
+function checkAnagramOrNot(input1, input2){
+	let str1 = input1.split('').sort().join('');
+	let str2 = input2.split('').sort().join('');
+	return str1 === str2 ? true : false;
+}
+checkAnagramOrNot("CCAC","ACCC");
