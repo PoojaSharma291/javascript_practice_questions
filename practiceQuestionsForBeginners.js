@@ -203,3 +203,47 @@ function checkAnagramOrNot(input1, input2){
 	return str1 === str2 ? true : false;
 }
 checkAnagramOrNot("CCAC","ACCC");
+
+// 16. Find Whether an array is a subset of other array
+function isSubSet(arr1,arr2){
+	let arr1 = arr1.sort().join('');
+	let arr2 = arr2.sort().join('');
+	if( arr1.contains(arr2) ){
+	   return true;
+	} else {
+	   return false;
+	}
+}
+isSubSet([1,2],[1,2,3]);
+
+// 17. Capitalize First Letter of evry word in given string
+function capFirstLetter(input){
+  let strToArr = input.split(' ');
+  let output = '';
+	for(let i=0;i< strToArr.length -1;i++){
+	 strToArr[i] = strToArr[i].toString();
+		strToArr[i] = strToArr[i].subString(0,1).toUpperCase + strToArr[i].subString(1);
+	}
+	output = strToArr.join('');
+	console.log(output);
+	}
+}
+capFirstLetter("i love javascript");
+
+// 18. Find maximum number of characters in  javaScript string
+function maxChar(input){
+ let inputArr = input.toLowercase().split('');
+	let inputObj = {};
+	for(let i=0;i < input.length;i++){
+	  let key= input[i];
+		if(inputObj[key]){
+			inputObj[key] =  inputObj[key] + 1;
+		} else { 
+		       inputObj[key] = 1;
+		}
+	}
+	let entries = Object.entries(inputObj);
+	let entriesSorted = entries.sort((a,b) => a[1] - b[1]);
+	console.log(entriesSorted[entriesSorted.length - 1][0]);
+}
+maxChar("javascript");
