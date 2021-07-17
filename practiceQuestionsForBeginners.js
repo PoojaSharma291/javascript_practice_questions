@@ -176,3 +176,10 @@ function fizzBuzz(input){
     }
 }
 fizzBuzz(30);
+
+// 13. Find Palindrome of a String in two lines return boolean
+function palindrome(input){
+ let reverseInput = input.split('').reverse().join();
+ return reverseInput === input ? true : false;
+}
+palindrome("NITIN");
