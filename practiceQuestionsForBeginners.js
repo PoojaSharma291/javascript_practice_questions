@@ -217,14 +217,15 @@ function isSubSet(arr1,arr2){
 isSubSet([1,2],[1,2,3]);
 
 // 17. Capitalize First Letter of evry word in given string
-function capFirstLetter(input){
+function capFirstLetter(input: string){
   let strToArr = input.split(' ');
+  console.log(strToArr);
   let output = '';
-	for(let i=0;i< strToArr.length -1;i++){
-	 strToArr[i] = strToArr[i].toString();
-		strToArr[i] = strToArr[i].subString(0,1).toUpperCase + strToArr[i].subString(1);
+	for(let i=0;i<strToArr.length;i++){
+     console.log( strToArr[i], " strToArr[i]")
+		strToArr[i] = strToArr[i].substring(0,1).toUpperCase() + strToArr[i].substring(1);
 	}
-	output = strToArr.join('');
+	output = strToArr.join(' ');
 	console.log(output);
 	}
 }
