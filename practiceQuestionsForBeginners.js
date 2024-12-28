@@ -276,5 +276,11 @@ function maxChar(input: string){
 	let entriesSorted = entries.sort((a,b) => a[1] - b[1]);
     console.log(entriesSorted);
 	console.log(" maximum number of characters is for : ",entriesSorted[entriesSorted.length - 1][0]);
+
+	//OR FOr last three lines do in descending instead
+	 // Find the character with the maximum count
+  // let entries = Object.entries(inputObj);
+  // let entriesSorted = entries.sort((a, b) => b[1] - a[1]); // Sort in descending order
+  // return entriesSorted[0][0]; // Return the character with the highest count
 }
 maxChar("javascript");
