@@ -254,3 +254,27 @@ function maxChar(input){
 	console.log(entriesSorted[entriesSorted.length - 1][0]);
 }
 maxChar("javascript");
+
+// In Typescript same question :
+
+// 18. Find maximum number of characters in  javaScript string
+function maxChar(input: string){
+ let inputArr = input.toLowerCase().split('');
+  let inputObj: { [key: string]: number } = {}; // Define type for the object
+	for(let i=0;i < inputArr.length;i++){
+	  let key: string = inputArr[i];
+      console.log(key);
+		if(inputObj[key] === undefined){
+		       inputObj[key] = 1;
+
+		} else { 
+			inputObj[key] =  inputObj[key] + 1;
+
+		}
+	}
+	let entries = Object.entries(inputObj);
+	let entriesSorted = entries.sort((a,b) => a[1] - b[1]);
+    console.log(entriesSorted);
+	console.log(" maximum number of characters is for : ",entriesSorted[entriesSorted.length - 1][0]);
+}
+maxChar("javascript");
