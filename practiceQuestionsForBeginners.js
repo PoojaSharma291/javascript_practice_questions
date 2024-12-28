@@ -205,16 +205,22 @@ function checkAnagramOrNot(input1, input2){
 checkAnagramOrNot("CCAC","ACCC");
 
 // 16. Find Whether an array is a subset of other array
-function isSubSet(arr1,arr2){
-	let arr1 = arr1.sort().join('');
-	let arr2 = arr2.sort().join('');
-	if( arr1.contains(arr2) ){
-	   return true;
+
+function isSubSet(arr1: number[],arr2: number[]){
+	let sortarr1 = arr1.sort().join('');
+	let sortarr2 = arr2.sort().join('');
+    console.log("sortarr2",sortarr2);
+        console.log("sortarr1",sortarr1);
+
+	if( sortarr2.includes(sortarr1) ){
+	   console.log(true) ;
+       return true;
 	} else {
+    console.log(false) ;
 	   return false;
 	}
 }
-isSubSet([1,2],[1,2,3]);
+isSubSet([1,2],[1,2,3])
 
 // 17. Capitalize First Letter of evry word in given string
 function capFirstLetter(input: string){
