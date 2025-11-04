@@ -61,7 +61,7 @@ function assignGrade(i) {
 function first10NaturalNum() {
     let output = '';
     for (let i = 1; i <= 10; i++) {
-        output += i + '<br/>';
+        output += i + '<br/>';// Note, that the <br/> works in browser only and not console, console will simply display <br/> instedad of new line so for console do this '\n' instead!
     }
     document.getElementById('naturalNum').innerHTML = output;
 }
