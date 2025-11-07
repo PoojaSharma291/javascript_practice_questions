@@ -126,6 +126,27 @@ function sortData(input){
   console.log(obj);
   console.log(sortObj);
 }
+// More efficient way
+// // 9. Sort on the basis of frequency the input array = [1,1,1,1,12,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,6,6,6,6,7,9]
+
+const sortData = (nums: number[]) => {
+  const frequencyMap = new Map<number, number>(); // { "1" : "4"} : Key is number and value is frequency
+
+  for(let i=0;i<nums.length;i++){
+    let count = 0;
+    if(frequencyMap.has(nums[i])){
+       count  = frequencyMap.get(nums[i])! + 1
+      frequencyMap.set(nums[i],count)
+    }
+    else{
+      frequencyMap.set(nums[i], count+1)
+    }
+  }
+
+  return Array.from(frequencyMap.entries()).sort((a,b) => {
+   return a[0] - b[0];
+  })
+}
 
 sortData([1,1,1,1,12,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,6,6,6,6,7,9]);
 
