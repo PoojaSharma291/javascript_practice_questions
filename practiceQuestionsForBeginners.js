@@ -128,7 +128,7 @@ function sortData(input){
 }
 // More efficient way
 // // 9. Sort on the basis of frequency the input array = [1,1,1,1,12,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,4,4,6,6,6,6,7,9]
-
+// Output :  [[1, 4], [2, 6], [3, 6], [4, 8], [6, 4], [7, 1], [9, 1], [12, 1]] 
 const sortData = (nums: number[]) => {
   const frequencyMap = new Map<number, number>(); // { "1" : "4"} : Key is number and value is frequency
 
